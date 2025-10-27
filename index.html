@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Онлайн-запись</title>
+  <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
+</head>
+<body style="display: flex; align-items: center; justify-content: center; height: 100vh; background: #fff; font-family: sans-serif;">
+  <button id="openSite" style="padding: 15px 25px; font-size: 18px; background: #0077ff; color: white; border: none; border-radius: 10px;">
+    Перейти к онлайн-записи
+  </button>
+
+  <script>
+    // Инициализация VK Bridge
+    vkBridge.send('VKWebAppInit');
+
+    // Обработка клика
+    document.getElementById('openSite').addEventListener('click', () => {
+      vkBridge.send('VKWebAppOpenLink', {
+        link: 'https://skinbylera-kosmetolog-estetist.booknow.ru', // <-- Вставь сюда свой сайт
+        external: true // важно!
+      });
+    });
+  </script>
+</body>
+</html>
+
