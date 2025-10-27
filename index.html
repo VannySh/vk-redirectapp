@@ -1,0 +1,16 @@
+<html>
+  <body style="display:flex;justify-content:center;align-items:center;height:100vh;background:#0a0a0a;color:white;flex-direction:column;">
+    <h2>Онлайн-запись</h2>
+    <button id="go" style="padding:15px 30px;font-size:18px;border:none;border-radius:12px;background:#4a76a8;color:white;">Перейти</button>
+
+    <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
+    <script>
+      const vkBridge = window.vkBridge;
+      vkBridge.send('VKWebAppInit');
+      document.getElementById('go').onclick = () => {
+        vkBridge.send("VKWebAppOpenLink", { url: "https://skinbylera-kosmetolog-estetist.booknow.ru" });
+      };
+    </script>
+  </body>
+</html>
+
