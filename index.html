@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Онлайн-запись</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: -apple-system, system-ui, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background: #fff;
+      }
+      button {
+        background: #2787f5;
+        color: white;
+        border: none;
+        border-radius: 12px;
+        padding: 16px 28px;
+        font-size: 17px;
+        font-weight: 500;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="go">Перейти на сайт записи</button>
+    <script>
+      document.getElementById('go').onclick = function () {
+        window.open('https://skinbylera-kosmetolog-estetist.booknow.ru/', '_blank');
+      };
+    </script>
+  </body>
+</html>
